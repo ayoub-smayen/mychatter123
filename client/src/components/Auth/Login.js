@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
     width: '100%',
+
     '& > * + *': {
       marginTop: theme.spacing(0),
     },
@@ -103,10 +104,10 @@ export default function SignInSide() {
     if(hasErrors) return false;
     return true;
   }
-
+//${process.env.REACT_APP_BACKEND_URL}
   const loginUser = async () => {
     try {
-        const fetchResponse = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
+        const fetchResponse = await axios.post(`/login`, {
             email,
             password
           });

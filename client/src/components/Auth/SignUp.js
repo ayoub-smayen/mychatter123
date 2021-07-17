@@ -60,7 +60,7 @@ export default function SignUp(props) {
   const [serverError, setServerError] = useState('');
   const [registerSuccesss, setRegisterSuccess] = useState(false);
   const [redirect, setRedirect] = useState(false);
-
+//${process.env.REACT_APP_BACKEND_URL}
   useEffect(() => {
     if(registerSuccesss){
       setTimeout(() => {
@@ -79,7 +79,7 @@ export default function SignUp(props) {
 
   const registerUser = async () => {
     try {
-        const fetchResponse = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/signup`, {
+        const fetchResponse = await axios.post(`/signup`, {
             fullName,
             email,
             password
