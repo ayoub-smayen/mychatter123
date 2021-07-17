@@ -412,8 +412,8 @@ if(process.env.NODE_ENV === 'production'){
      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
    })
 }
-
-mongoose.connect(process.env.DB_URL,  
+//process.env.DB_URL
+mongoose.connect("mongodb+srv://cluster0.fgqdy.mongodb.net/redis",  
 {
   useNewUrlParser: true, 
   useUnifiedTopology:true,

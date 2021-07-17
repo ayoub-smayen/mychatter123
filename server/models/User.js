@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+//"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 
 const userSchema = new mongoose.Schema({
     _id: {type: String, required: true},
