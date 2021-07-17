@@ -19,8 +19,8 @@ export default function MessageItem(props) {
    let msg_attachment = null;
    if(attachment){
         msg_attachment = <div>
-            <a href={ '/server/images/' + attachment} target="_blank" rel="noopener noreferrer">
-                <img src={ '/server/images/' + attachment} alt="Message Attachment" className="messageItemAttachment" />
+            <a href={process.env.REACT_APP_BACKEND_URL  + '/server/images/' + attachment} target="_blank" rel="noopener noreferrer">
+                <img src={process.env.REACT_APP_BACKEND_URL  '/server/images/' + attachment} alt="Message Attachment" className="messageItemAttachment" />
             </a>
         </div> 
    }

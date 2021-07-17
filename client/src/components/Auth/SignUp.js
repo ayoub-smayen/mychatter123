@@ -79,7 +79,7 @@ export default function SignUp(props) {
 
   const registerUser = async () => {
     try {
-        const fetchResponse = await axios.post(`/signup`, {
+        const fetchResponse = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/signup`, {
             fullName,
             email,
             password

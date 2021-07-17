@@ -104,10 +104,10 @@ export default function SignInSide() {
     if(hasErrors) return false;
     return true;
   }
-//${process.env.REACT_APP_BACKEND_URL}
+//
   const loginUser = async () => {
     try {
-        const fetchResponse = await axios.post(`/login`, {
+        const fetchResponse = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
             email,
             password
           });
