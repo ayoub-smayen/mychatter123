@@ -222,7 +222,7 @@ io.on('connection', (socket) => {
       sender: user,
       message: msg.text,
       user: userID,
-      attachment: msg.attachment ?? null,
+      attachment: msg.attachment || null,
       date: messageData.getHours() + ":" + messageData.getMinutes(),
     });
 
@@ -231,7 +231,7 @@ io.on('connection', (socket) => {
       sender: user,
       user: userID,
       message: msg.text,
-      attachment: msg.attachment ?? null,
+      attachment: msg.attachment || null,
       date: messageData.getHours() + ":" + messageData.getMinutes(),
     });
 
